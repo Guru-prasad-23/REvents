@@ -7,6 +7,7 @@ import caro from "../assets/caro1.jpg";
 import { FiInstagram } from "react-icons/fi";
 import { FaFacebookF } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const Services = () => {
   return (
@@ -33,7 +34,14 @@ const Services = () => {
 
       <div className="max-w-screen lg:max-w-7xl place-content-center flex flex-col justify-center items-center  m-auto mt-28 lg:grid md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-6">
         {ServicesList.map((item, id) => (
-          <div key={id} className=" w-88 h-max flex flex-col gap-2">
+          <motion.div
+            key={id}
+            className=" w-88 h-max flex flex-col gap-2"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: id * 0.1 }}
+            viewport={{ once: true }}
+          >
             <img
               src={item.image}
               alt="services"
@@ -41,7 +49,7 @@ const Services = () => {
             />
             <p className="text-3xl font-extrabold font-display">{item.title}</p>
             <p className="text-black/70 font-serif">{item.text}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
 
@@ -51,9 +59,17 @@ const Services = () => {
         </h1>
         <div className="flex gap-6 items-center justify-center mt-14 flex-wrap lg:flex-nowrap md:flex-nowrap">
           {AdditionalServices.map((item, id) => (
-            <div key={id}>
-              <p className="font-semibold border-b p-2 lg:border-none md:border-none">{item.name}</p>
-            </div>
+            <motion.div
+              key={id}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: id * 0.1 }}
+              viewport={{ once: true }}
+            >
+              <p className="font-semibold border-b p-2 lg:border-none md:border-none">
+                {item.name}
+              </p>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -64,9 +80,17 @@ const Services = () => {
         </h1>
         <div className="flex gap-6 items-center justify-center mt-14 flex-wrap lg:flex-nowrap md:flex-nowrap">
           {CateringServices.map((item, id) => (
-            <div key={id}>
-              <p className="font-semibold border-b p-2 lg:border-none md:border-none">{item.name}</p>
-            </div>
+            <motion.div
+              key={id}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: id * 0.1 }}
+              viewport={{ once: true }}
+            >
+              <p className="font-semibold border-b p-2 lg:border-none md:border-none">
+                {item.name}
+              </p>
+            </motion.div>
           ))}
         </div>
       </div>

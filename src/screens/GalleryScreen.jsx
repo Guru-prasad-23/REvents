@@ -1,10 +1,12 @@
 import React from "react";
+import { motion } from "framer-motion";
 import caro from "../assets/caro3.jpg";
 import { Link } from "react-router-dom";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";
 import { FiInstagram } from "react-icons/fi";
 import { gallery } from "../constants";
+
 const GalleryScreen = () => {
   return (
     <div className="w-screen mt-6">
@@ -29,17 +31,20 @@ const GalleryScreen = () => {
       </div>
 
       <div className="p-4 max-w-7xl m-auto mt-18">
-        <p className="hidden lg:block md: blocktext-center p-4 text-black/70 font-style: italic ">
+        <p className="hidden lg:block md:block text-center p-4 text-black/70 italic">
           *Hover to Play videos
         </p>
-        <p className="lg:hidden md:hidden text-center p-4 text-black/70 font-style: italic ">
+        <p className="lg:hidden md:hidden text-center p-4 text-black/70 italic">
           *Click on videos to play
         </p>
 
         <div className="grid grid-cols-3 md:grid-cols-4 gap-2">
           {gallery.map((item, id) => (
-            <div
+            <motion.div
               key={item.id}
+              initial={{ x: -50, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: id * 0.1 }}
               className={`relative overflow-hidden ${
                 item.type === "video"
                   ? "col-span-2 row-span-2"
@@ -62,7 +67,7 @@ const GalleryScreen = () => {
                   className="w-full h-full object-cover rounded-lg"
                 />
               )}
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
