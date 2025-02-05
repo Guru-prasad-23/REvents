@@ -49,10 +49,10 @@ const Services = () => {
         <h1 className="text-center text-2xl font-semibold pl-4 pr-4 p-2 m-auto rounded-full bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 w-max">
           Additional Services
         </h1>
-        <div className="flex gap-6 items-center justify-center mt-14">
+        <div className="flex gap-6 items-center justify-center mt-14 flex-wrap lg:flex-nowrap md:flex-nowrap">
           {AdditionalServices.map((item, id) => (
             <div key={id}>
-              <p className="font-semibold ">{item.name}</p>
+              <p className="font-semibold border-b p-2 lg:border-none md:border-none">{item.name}</p>
             </div>
           ))}
         </div>
@@ -62,10 +62,10 @@ const Services = () => {
         <h1 className="text-center text-2xl font-semibold pl-4 pr-4 p-2 m-auto rounded-full bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 w-max">
           Catering Services
         </h1>
-        <div className="flex gap-6 items-center justify-center mt-14">
+        <div className="flex gap-6 items-center justify-center mt-14 flex-wrap lg:flex-nowrap md:flex-nowrap">
           {CateringServices.map((item, id) => (
             <div key={id}>
-              <p className="font-semibold ">{item.name}</p>
+              <p className="font-semibold border-b p-2 lg:border-none md:border-none">{item.name}</p>
             </div>
           ))}
         </div>
