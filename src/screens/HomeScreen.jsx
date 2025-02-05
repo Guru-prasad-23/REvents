@@ -1,10 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import "./../index.css";
-import video1 from '../assets/RenderB1.mp4'
-import OurGallery from "../components/OurGallery";
+import video1 from "../assets/RenderB1.mp4";
 import Testimonials from "../components/Testimonials";
-
+import OurServices from "../components/OurServices";
+import OurGallery from "../components/OurGallery";
 
 const HomeScreen = () => {
   return (
@@ -20,11 +20,18 @@ const HomeScreen = () => {
         </p>
       </div>
       <div className="lg:mt-26 md:mt-24 mt-12 lg:rounded-2xl md:rounded-2xl lg:border-4 md:border-2 lg:border-indigo-300 md:border-indigo-300 lg:p-4 md:p-4 ">
-        <video src={video1} autoPlay loop muted playsInline className="lg:rounded-2xl md:rounded-2xl">
-        </video>
+        <video
+          src={video1}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="lg:rounded-2xl md:rounded-2xl"
+        ></video>
       </div>
-      <OurGallery />
-      <Testimonials/>
+      <OurServices />
+      <OurGallery/>
+      <Testimonials />
     </div>
   );
 };
