@@ -20,15 +20,27 @@ const Footer = () => {
             <h1 className="text-sm cursor-pointer">FAQ</h1>
           </div>
           <div className="flex flex-col gap-4">
-            <h1 className="text-xl font-semibold">Subscribe to Our Newsletter</h1>
-            <form action="" className="bg-gradient-to-l from-blue-700 via-pruple-600 to-pink-600 p-2 rounded-md flex gap-2 flex-col">
-              <input type="text" placeholder="Email address" className="bg-white w-full text-black p-4 rounded-md outline-none"/>
-              <button type="submit" className="bg-red-500 w-full flex-1 p-2 rounded font-semibold cursor-pointer">Subscribe</button>
+            <h1 className="text-xl font-semibold">
+              Subscribe to Our Newsletter
+            </h1>
+            <form
+              action=""
+              className="bg-gradient-to-l from-blue-700 via-pruple-600 to-pink-600 p-2 rounded-md flex gap-2 flex-col"
+            >
+              <input
+                type="text"
+                placeholder="Email address"
+                className="bg-white w-full text-black p-4 rounded-md outline-none"
+              />
+              <button
+                type="submit"
+                className="bg-red-500 w-full flex-1 p-2 rounded font-semibold cursor-pointer"
+              >
+                Subscribe
+              </button>
             </form>
           </div>
-          <div>
-
-          </div>
+          <div></div>
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { motion, useScroll } from "framer-motion";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   const { scrollYProgress } = useScroll();
@@ -26,6 +27,7 @@ const App = () => {
         transition={{ duration: 0.5 }}
       >
         <Navbar />
+        <ScrollToTop />
       </motion.div>
       <Outlet />
       <Footer />

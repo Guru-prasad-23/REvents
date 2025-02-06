@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { HeroSectionServicesList } from "../constants";
 import { Link } from "react-router-dom";
+
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -50,6 +51,8 @@ const titleVariants = {
 };
 
 const OurServices = () => {
+
+
   return (
     <motion.div
       className="max-w-7xl m-auto mt-18"
@@ -80,6 +83,7 @@ const OurServices = () => {
             <motion.img
               src={item.image}
               alt=""
+              onLoad={() => setLoaded(true)}
               className="rounded-md shadow-lg"
             />
             <motion.p
