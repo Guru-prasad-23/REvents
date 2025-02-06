@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
@@ -12,6 +13,7 @@ import HomeScreen from "./screens/HomeScreen.jsx";
 import ServicesScreen from "./screens/ServicesScreen.jsx";
 import AboutScreen from "./screens/AboutScreen.jsx";
 import GalleryScreen from "./screens/GalleryScreen.jsx";
+import Loader from "./components/Loader";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,8 +26,20 @@ const router = createBrowserRouter(
   )
 );
 
+const RootComponent = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
+  return loading ? <Loader /> : <RouterProvider router={router} />;
+};
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <RootComponent />
   </StrictMode>
 );

@@ -1,4 +1,3 @@
-import React from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -21,7 +20,13 @@ const App = () => {
           backgroundColor: "#ff0088",
         }}
       ></motion.div>
-      <Navbar />
+      <motion.div
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <Navbar />
+      </motion.div>
       <Outlet />
       <Footer />
     </>
