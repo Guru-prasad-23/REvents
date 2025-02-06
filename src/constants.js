@@ -1,6 +1,3 @@
-import image1 from "./assets/caro1.jpg";
-import image2 from "./assets/caro2.jpg";
-import image3 from "./assets/caro3.jpg";
 import galleryImg1 from "./assets/gallery/2 (2).png";
 import galleryImg2 from "./assets/gallery/3.png";
 import galleryImg3 from "./assets/gallery/4.png";
@@ -21,31 +18,36 @@ import galleryVideos3 from "./assets/gallery/video3.webm";
 import galleryVideos4 from "./assets/gallery/video4.webm";
 import galleryVideos5 from "./assets/gallery/video5.webm";
 import galleryVideos6 from "./assets/gallery/video6.webm";
+import dj from "./assets/dj.webp";
+import birthday from "./assets/birthday.webp";
+import surprise from "./assets/surprise.webp";
+import haldi from "./assets/haldi.webp";
+import wedding from "./assets/wedding.webp";
 
 export const HeroSectionServicesList = [
   {
     title: "Wedding",
-    image: image1,
+    image: wedding,
   },
   {
     title: "Birth Day parties",
-    image: image2,
+    image: birthday,
   },
   {
     title: "DJ music",
-    image: image3,
+    image: dj,
   },
   {
     title: "Haldi & Mehendi",
-    image: image1,
+    image: haldi,
   },
   {
     title: "Surprise Parties",
-    image: image2,
+    image: surprise,
   },
   {
-    title: "Wedding",
-    image: image3,
+    title: "Sangeet",
+    image: dj,
   },
 ];
 export const ServicesList = [

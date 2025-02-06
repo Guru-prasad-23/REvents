@@ -3,6 +3,7 @@ import OurGallery from "../components/OurGallery";
 import Testimonials from "../components/Testimonials";
 import video1 from "../assets/RenderB1.mp4";
 import { motion } from "framer-motion";
+import Contact from "../components/Contact";
 
 const HomeScreen = () => {
   return (
@@ -45,6 +46,7 @@ const HomeScreen = () => {
       <OurServices />
       <OurGallery />
       <Testimonials />
+      <Contact/>
     </motion.div>
   );
 };

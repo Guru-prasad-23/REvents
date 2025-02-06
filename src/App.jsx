@@ -3,12 +3,13 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { motion, useScroll } from "framer-motion";
 import ScrollToTop from "./components/ScrollToTop";
-
+import { ToastContainer } from "react-toastify";
 const App = () => {
   const { scrollYProgress } = useScroll();
 
   return (
     <>
+      <ToastContainer />
       <motion.div
         style={{
           scaleX: scrollYProgress,
